@@ -1,40 +1,18 @@
-import * as React from 'react';
-import type { AppProps } from 'next/app';
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { ChakraProvider, VStack } from "@chakra-ui/react";
+import myNewTheme from "../styles/theme";
+import Footer from "../components/shared/Footer";
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-
-/* Custom components */
-
-
-import createEmotionCache from '../utility/createEmotionCache';
-import lightThemeOptions from '../styles/lightThemeOptions';
-import '../styles/globals.css';
-import Navbar from '../components/shared/Navbar';
-interface MyAppProps extends AppProps {
-  emotionCache?: EmotionCache;
-}
-
-const clientSideEmotionCache = createEmotionCache();
-
-const lightTheme = createTheme(lightThemeOptions);
-
-const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={lightTheme}>
-        <CssBaseline />
-        <Navbar/>
+    <ChakraProvider theme={myNewTheme}>
+      <VStack textAlign={"center"}>
         <Component {...pageProps} />
-      </ThemeProvider>
-    </CacheProvider>
+        <Footer />
+      </VStack>
+    </ChakraProvider>
   );
-};
+}
 
 export default MyApp;

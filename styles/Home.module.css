@@ -1,8 +1,8 @@
-
-
 .main {
   min-height: 100vh;
-
 }
 
-
+.container{
+  max-width: 100%;
+  overflow-x: hidden;
+}
