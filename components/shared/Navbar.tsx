@@ -10,12 +10,9 @@ import {
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NextPage } from "next";
-import {
-  faCartShopping,
-  faUser,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { SearchIcon } from "@chakra-ui/icons";
+import Image from "next/image";
 
 const Navbar: NextPage = () => {
   return (
@@ -32,8 +29,9 @@ const Navbar: NextPage = () => {
       borderBottomWidth="1px"
       borderBottomColor="whiteAlpha.500"
       color="whiteAlpha.800"
+      userSelect={"none"}
     >
-      <Text>Logo</Text>
+      <Image src={"/MyLogoWhite.svg"} width="40px" height="40px"></Image>
 
       <Box borderLeftWidth="1px" borderLeftColor="whiteAlpha.500" h="100%" />
 
@@ -43,12 +41,16 @@ const Navbar: NextPage = () => {
           maxLength={40}
           borderWidth={"0"}
           _focus={{ borderWidth: "0" }}
-          placeholder="Encuentra lo que buscas..."
+          placeholder="Start typing to find anything..."
         />
       </HStack>
 
-      <Text>Descatados</Text>
-      <Text>Productos</Text>
+      <Text cursor={"pointer"} _hover={{ textDecor: "underline" }}>
+        New
+      </Text>
+      <Text cursor={"pointer"} _hover={{ textDecor: "underline" }}>
+        Products
+      </Text>
       <Spacer />
       <Box borderLeftWidth="1px" borderLeftColor="whiteAlpha.500" h="100%" />
 

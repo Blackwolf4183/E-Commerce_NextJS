@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/shared/Navbar";
+import ProductsCarrousel from "../components/shared/Products/ProductsCarrousel";
 
 const Home: NextPage = () => {
   return (
@@ -31,9 +32,15 @@ const Home: NextPage = () => {
           <Box w="80%" textAlign={"left"} h="50%">
 
             <Heading color="white" fontSize={"5xl"}>Encuentra tu ropa de calidad solo en </Heading> {' '}
-            <Heading fontSize={"6xl"}>Nombre tienda</Heading>
+            <Heading fontSize={"6xl"}>Duckify</Heading>
             <Text fontSize={"2xl"} color="whiteAlpha.800">Productos únicos,<br/> traidos directamente de la mano de los mejores fabricantes</Text>
           </Box>
+        </VStack>
+
+        <VStack pt="10" spacing="10">
+          <Heading fontSize={"3xl"}>Featured Products</Heading>
+
+          <ProductsCarrousel/>
         </VStack>
       </main>
     </div>
