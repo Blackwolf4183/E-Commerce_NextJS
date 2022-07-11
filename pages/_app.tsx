@@ -7,7 +7,7 @@ import Footer from "../components/shared/Footer";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={myNewTheme}>
-      <VStack textAlign={"center"}>
+      <VStack textAlign={"center"} spacing="20">
         <Component {...pageProps} />
         <Footer />
       </VStack>

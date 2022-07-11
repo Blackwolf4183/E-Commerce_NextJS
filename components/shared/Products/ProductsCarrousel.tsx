@@ -10,8 +10,8 @@ const ProductsCarrousel: NextPage = () => {
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
+
+
         </HStack>
     )
 }

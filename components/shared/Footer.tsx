@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter,faFacebookF,faInstagram } from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 
 const MotionText = motion(Text);
 
@@ -14,8 +15,9 @@ const Footer: NextPage = () => {
             <HStack  spacing="100" mt="20">
                 <VStack minW="250px" spacing="5" align="flex-start">
                     <HStack>
-                        <Box w="50px" h="50px" bgColor={"green.400"}/>
-                        <Heading fontSize={"4xl"}>Duckify</Heading>
+                        <Image src="/MyLogoWhite.svg" height="100px" width="100px"/>
+                        {/* <Box w="50px" h="50px" bgColor={"green.400"}/> */}
+                        <Heading fontSize={"4xl"}>MyGame</Heading>
                     </HStack>
                     <Text textAlign={"left"} fontSize="lg" color="whiteAlpha.800">Follow us in our social media and <br/> 
                     don't miss any new opportunities!</Text>

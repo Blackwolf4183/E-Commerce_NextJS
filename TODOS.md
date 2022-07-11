@@ -1,0 +1,4 @@
+-Menú deslizante para acceder a tipos de productos
+-Página de carrito
+-Página de producto
+-Terminar página principal
