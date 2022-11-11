@@ -25,12 +25,13 @@ const Navbar: NextPage = () => {
       left="0"
       right="0"
       top="0"
+      zIndex={5}
       position={"fixed"}
       borderBottomWidth="1px"
       borderBottomColor="whiteAlpha.500"
       color="white"
       userSelect={"none"}
-      bgColor="whiteAlpha.200"
+      bgColor="rgba(20,20,20,0.5)"
       backdropFilter={"blur(6px)"}
     >
       <Image src={"/MyLogoWhite.svg"} style={{"marginLeft":"15px"}} width="40px" height="40px"></Image>
@@ -53,6 +54,9 @@ const Navbar: NextPage = () => {
       </Text>
       <Text cursor={"pointer"} _hover={{ textDecor: "underline" }}>
         Products
+      </Text>
+      <Text cursor={"pointer"} _hover={{ textDecor: "underline" }}>
+        Profile
       </Text>
       <Spacer />
       <Box borderLeftWidth="1px" borderLeftColor="whiteAlpha.500" h="100%" />
